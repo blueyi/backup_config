@@ -1,18 +1,17 @@
 
 """"""""""""""""""""""""""""""""""""""
 "Vundle-Plugin-manager
-"
-set nocompatible              " be iMproved, required
-filetype off                  " required
+    set nocompatible              " be iMproved, required
+    filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+    " set the runtime path to include Vundle and initialize
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+    " alternatively, pass a path where Vundle should install plugins
+    "call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+    " let Vundle manage Vundle, required
+    Plugin 'gmarik/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -33,68 +32,68 @@ Plugin 'gmarik/Vundle.vim'
 "********************************************
 "My Plugin
 
-" Auto complete
-Plugin 'Valloric/YouCompleteMe.git' 
+    " Auto complete
+    Plugin 'Valloric/YouCompleteMe.git' 
 
-" lean & mean status/tabline for vim that's light as air  
-Plugin 'bling/vim-airline.git'
+    " lean & mean status/tabline for vim that's light as air  
+    Plugin 'bling/vim-airline.git'
 
-" insert mode auto-completion for quotes, parens, brackets, etc.
-Plugin 'Raimondi/delimitMate.git'
+    " insert mode auto-completion for quotes, parens, brackets, etc.
+    Plugin 'Raimondi/delimitMate.git'
 
-" Syntax checking hacks for vim 
-Plugin 'scrooloose/syntastic'
+    " Syntax checking hacks for vim 
+    Plugin 'scrooloose/syntastic'
 
-" The ultimate snippet solution for Vim
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+    " The ultimate snippet solution for Vim
+    Plugin 'SirVer/ultisnips'
+    Plugin 'honza/vim-snippets'
 
-" extended % matching for HTML, LaTeX, and many other languages
-Plugin 'edsono/vim-matchit'
+    " extended % matching for HTML, LaTeX, and many other languages
+    Plugin 'edsono/vim-matchit'
 
-" Support web develop
-" Plugin 'mattn/emmet-vim.git'
+    " Support web develop
+    " Plugin 'mattn/emmet-vim.git'
 
-" Fuzzy file, buffer, mru, tag, etc finder
-Plugin 'kien/ctrlp.vim'
+    " Fuzzy file, buffer, mru, tag, etc finder
+    Plugin 'kien/ctrlp.vim'
 
-" a Git wrapper so awesome
-Plugin 'tpope/vim-fugitive'
+    " a Git wrapper so awesome
+    Plugin 'tpope/vim-fugitive'
 
-" displays tags in a window, ordered by scope
-Plugin 'majutsushi/tagbar'
+    " displays tags in a window, ordered by scope
+    Plugin 'majutsushi/tagbar'
 
-" Markdown support
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+    " Markdown support
+    Plugin 'godlygeek/tabular'
+    Plugin 'plasticboy/vim-markdown'
 
-"intensely orgasmic commenting  
-Plugin 'scrooloose/nerdcommenter'
+    "intensely orgasmic commenting  
+    Plugin 'scrooloose/nerdcommenter'
 
-" visualize your Vim undo tree
-Plugin 'sjl/gundo.vim'
+    " visualize your Vim undo tree
+    Plugin 'sjl/gundo.vim'
 
-"quoting/parenthesizing made simple use cs/ds
-Plugin 'tpope/vim-surround'
+    "quoting/parenthesizing made simple use cs/ds
+    Plugin 'tpope/vim-surround'
 
-"automatically adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
-Plugin 'tpope/vim-sleuth'
+    "automatically adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
+    Plugin 'tpope/vim-sleuth'
 
-"Open URI with your favorite browser from your most favorite editor 
-Plugin 'tyru/open-browser.vim'
+    "Open URI with your favorite browser from your most favorite editor 
+    Plugin 'tyru/open-browser.vim'
 
-"Alternate Files quickly (.c --> .h etc)
-Plugin 'vim-script/a.vim'
+    "Alternate Files quickly (.c --> .h etc)
+    Plugin 'vim-script/a.vim'
 
-"********************************************
-" Color schemes
-Plugin 'tomasr/molokai'
-Plugin 'flazz/vim-colorschemes'
+    "********************************************
+    " Color schemes
+    Plugin 'tomasr/molokai'
+    Plugin 'flazz/vim-colorschemes'
 "********************************************
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+    call vundle#end()            " required
+    filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -114,98 +113,98 @@ filetype plugin indent on    " required
 
 "***************
 "--Youcompleteme configure--
-"Recompile and diagnostics withe F5
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-let g:ycm_use_ultisnips_completer = 1
+    "Recompile and diagnostics withe F5
+    nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+    let g:ycm_use_ultisnips_completer = 1
 
 "***************
 "--vim-airline configure--
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_powerline_fonts = 1
-set t_Co=256
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#left_sep = ' '
+    let g:airline#extensions#tabline#left_alt_sep = '|'
+    let g:airline_powerline_fonts = 1
+    set t_Co=256
 
 "***************
 "--Syntastic configure--
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-"let g:syntastic_python_python_exec = '/path/to/python3'
-" support html5
-"let g:syntastic_html_tidy_exec = 'tidy5'
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+    "let g:syntastic_python_python_exec = '/path/to/python3'
+    " support html5
+    "let g:syntastic_html_tidy_exec = 'tidy5'
 
 "***************
 "--UltiSnips configure--
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+    " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<c-b>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+    " If you want :UltiSnipsEdit to split your window.
+    let g:UltiSnipsEditSplit="vertical"
 
 "***************
 "--matchit configure--
-let b:match_words='\<begin\>:\<end\>' 
-let b:match_ignorecase = 1
+    let b:match_words='\<begin\>:\<end\>' 
+    let b:match_ignorecase = 1
 
 "***************
 "--emmet configure--
-"let g:user_emmet_mode='n'    "only enable normal mode functions.
-"let g:user_emmet_mode='inv'  "enable all functions, which is equal to
-"let g:user_emmet_mode='a'    "enable all function in all mode.
-"Enable just for html/css
-"let g:user_emmet_install_global = 0
-"autocmd FileType html,css EmmetInstall
+    "let g:user_emmet_mode='n'    "only enable normal mode functions.
+    "let g:user_emmet_mode='inv'  "enable all functions, which is equal to
+    "let g:user_emmet_mode='a'    "enable all function in all mode.
+    "Enable just for html/css
+    "let g:user_emmet_install_global = 0
+    "autocmd FileType html,css EmmetInstall
 
 "***************
 "--ctrlp configure--
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+    let g:ctrlp_map = '<c-p>'
+    let g:ctrlp_cmd = 'CtrlP'
 
 "***************
 "--tagbar configure--
-nmap <F3> :TagbarToggle<CR>
+    nmap <F3> :TagbarToggle<CR>
 
 "***************
 "--vim-markdown configure--
-let g:vim_markdown_folding_disabled=1
+    let g:vim_markdown_folding_disabled=1
 
 
 "***************
 "--gundo configure--
-nnoremap <F4> :GundoToggle<CR>
-let g:gundo_width = 60
-let g:gundo_preview_height = 40
-let g:gundo_right = 1
+    nnoremap <F4> :GundoToggle<CR>
+    let g:gundo_width = 60
+    let g:gundo_preview_height = 40
+    let g:gundo_right = 1
 
 "***************
 "--open-browser configure--
-nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
-" Open URI under cursor.
-nmap ob <Plug>(openbrowser-open)
-" Open selected URI.
-vmap ob <Plug>(openbrowser-open)
-" Search word under cursor.
-nmap ob <Plug>(openbrowser-search)
-" Search selected word. 
-vmap ob <Plug>(openbrowser-search)
-" If it looks like URI, Open URI under cursor.
-" Otherwise, Search word under cursor.
-nmap ob <Plug>(openbrowser-smart-search)
-" If it looks like URI, Open selected URI.
-" Otherwise, Search selected word.
-vmap ob <Plug>(openbrowser-smart-search)
-" In command-line
-" :OpenBrowser http://google.com/
-" :OpenBrowserSearch ggrks
-" :OpenBrowserSmartSearch http://google.com/
-" :OpenBrowserSmartSearch ggrks
+    nmap gx <Plug>(openbrowser-smart-search)
+    vmap gx <Plug>(openbrowser-smart-search)
+    " Open URI under cursor.
+    nmap ob <Plug>(openbrowser-open)
+    " Open selected URI.
+    vmap ob <Plug>(openbrowser-open)
+    " Search word under cursor.
+    nmap ob <Plug>(openbrowser-search)
+    " Search selected word. 
+    vmap ob <Plug>(openbrowser-search)
+    " If it looks like URI, Open URI under cursor.
+    " Otherwise, Search word under cursor.
+    nmap ob <Plug>(openbrowser-smart-search)
+    " If it looks like URI, Open selected URI.
+    " Otherwise, Search selected word.
+    vmap ob <Plug>(openbrowser-smart-search)
+    " In command-line
+    " :OpenBrowser http://google.com/
+    " :OpenBrowserSearch ggrks
+    " :OpenBrowserSmartSearch http://google.com/
+    " :OpenBrowserSmartSearch ggrks
 
 
 "***************
@@ -217,16 +216,12 @@ vmap ob <Plug>(openbrowser-smart-search)
 
 "***************
 "vim comfigure
-"Chinese encoding support
-set fileencodings=ucs-bom,utf-8,cp936,gb2312,gb18030,big5,euc-jp,euc-kr,latin1
-set termencoding=utf-8
-set encoding=utf-8 
 
 "--Other vim setting--
     "set ignorecase        " 搜索模式里忽略大小写
-	"set smartcase        " 如果搜索模式包含大写字符，不使用 'ignorecase' 选项。只有在输入搜索模式并且打开 'ignorecase' 选项时才会使用。
-	set autowrite        " 自动把内容写回文件: 如果文件被修改过，在每个 :next、:rewind、:last、:first、:previous、:stop、:suspend、:tag、:!、:make、CTRL-] 和 CTRL-^命令时进行；用 :buffer、CTRL-O、CTRL-I、'{A-Z0-9} 或 `{A-Z0-9} 命令转到别的文件时亦然。
-	set autoindent        " 设置自动对齐(缩进)：即每行的缩进值与上一行相等；使用 noautoindent 取消设置
+    "set smartcase        " 如果搜索模式包含大写字符，不使用 'ignorecase' 选项。只有在输入搜索模式并且打开 'ignorecase' 选项时才会使用。
+    set autowrite        " 自动把内容写回文件: 如果文件被修改过，在每个 :next、:rewind、:last、:first、:previous、:stop、:suspend、:tag、:!、:make、CTRL-] 和 CTRL-^命令时进行；用 :buffer、CTRL-O、CTRL-I、'{A-Z0-9} 或 `{A-Z0-9} 命令转到别的文件时亦然。
+    set autoindent        " 设置自动对齐(缩进)：即每行的缩进值与上一行相等；使用 noautoindent 取消设置
     "set smartindent        " 智能对齐方式
     set tabstop=4        " 设置制表符(tab键)的宽度
     set softtabstop=4     " 设置软制表符的宽度    
@@ -277,5 +272,30 @@ set encoding=utf-8
     imap <F7> <ESC>:make<CR><CR><CR> :copen<CR><CR>
     imap <F8> <ESC>:cp<CR>
     imap <F9> <ESC>:cn<CR>
+
+"-- For ruby development setting --
+    " install rsense 
+    "let g:rsenseHome = "/home/blueyi/opt/rsense-0.3"
+    "If you want to start completion automatically, add the following code to .vimrc and restart Vim.
+    "let g:rsenseUseOmniFunc = 1
+
+    " F9 run ruby
+    "map <F9> :!ruby -w % <CR>
+    "imap <F9> <ESC>:!ruby -w % <CR>
+    " F8 check ruby syntax only
+    "map <F8> :w !ruby -c % <CR>
+    "imap <F8> <ESC>:w !ruby -c % <CR>
+
+    "autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+    "autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+    "autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
+"-- For python development setting --
+
+
+"-- Chinese encoding support --
+    set fileencodings=ucs-bom,utf-8,cp936,gb2312,gb18030,big5,euc-jp,euc-kr,latin1
+    set termencoding=utf-8
+    set encoding=utf-8 
 
 
