@@ -150,8 +150,8 @@ Plugin 'gmarik/Vundle.vim'
 "My Plugin
 
     " Auto complete
-    " Plugin 'Valloric/YouCompleteMe.git' 
-    Plugin 'Shougo/neocomplete.vim.git'
+     Plugin 'Valloric/YouCompleteMe.git' 
+    " Plugin 'Shougo/neocomplete.vim.git'
 
     " lean & mean status/tabline for vim that's light as air  
     Plugin 'bling/vim-airline.git'
@@ -215,7 +215,7 @@ Plugin 'gmarik/Vundle.vim'
     " Color schemes
     Plugin 'blueyi/myvimcolors'
     Plugin 'tomasr/molokai'
-    Plugin 'flazz/vim-colorschemes'
+   " Plugin 'flazz/vim-colorschemes'
 "********************************************
 
 
@@ -328,11 +328,19 @@ endif
 " 设置代码配色方案
 " set t_Co=256
 if g:isGUI
-"    colorscheme Tomorrow-Night-Eighties               "Gvim配色方案
-     " colorscheme molikai
-     colorscheme solarized
+    " colorscheme Tomorrow-Night-Eighties               "Gvim配色方案
+    " colorscheme molokai
+    set background=dark
+    colorscheme solarized
 else
-    colorscheme Tomorrow-Night-Eighties               "终端配色方案
+    "colorscheme Tomorrow-Night-Eighties               "终端配色方案
+    
+    let g:molokai_original = 1
+    let g:rehash256 = 1
+    colorscheme molokai
+
+    "set background=dark
+    "colorscheme solarized
 endif
 
 " 显示/隐藏菜单栏、工具栏、滚动条，可用 Ctrl + F11 切换
@@ -435,7 +443,7 @@ endfunction
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+"inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 " Close popup by <Space>.
