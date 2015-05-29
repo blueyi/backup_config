@@ -1,0 +1,7 @@
+[USTCmirror:13.2:OSS]
+name=USTCmirror:13.2:OSS
+enabled=0
+autorefresh=1
+baseurl=http://mirrors.ustc.edu.cn/opensuse/distribution/13.2/repo/oss
+type=yast2
+keeppackages=0

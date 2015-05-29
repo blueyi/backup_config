@@ -1,0 +1,7 @@
+[home:lnt-sysadmin:tools]
+name=home:lnt-sysadmin:tools
+enabled=1
+autorefresh=0
+baseurl=http://download.opensuse.org/repositories/home:/lnt-sysadmin:/tools/openSUSE_13.2/
+type=rpm-md
+keeppackages=0

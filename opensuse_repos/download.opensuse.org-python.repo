@@ -1,0 +1,8 @@
+[download.opensuse.org-python]
+name=openSUSE BuildService - devel:languages:python
+enabled=0
+autorefresh=0
+baseurl=http://download.opensuse.org/repositories/devel:/languages:/python/openSUSE_13.2/
+path=/
+type=rpm-md
+keeppackages=0

@@ -1,0 +1,7 @@
+[aliyun-mirror:13.2:OSS]
+name=aliyun-mirror:13.2:OSS
+enabled=1
+autorefresh=1
+baseurl=http://mirrors.aliyun.com/opensuse/distribution/13.2/repo/oss
+type=yast2
+keeppackages=0

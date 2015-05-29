@@ -1,0 +1,7 @@
+[opensuse_zh]
+name=opensuse_zh
+enabled=0
+autorefresh=1
+baseurl=http://download.opensuse.org/repositories/home:/opensuse_zh/openSUSE_13.2/
+type=rpm-md
+keeppackages=0

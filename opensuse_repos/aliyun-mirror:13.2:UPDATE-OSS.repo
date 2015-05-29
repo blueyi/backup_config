@@ -1,0 +1,7 @@
+[aliyun-mirror:13.2:UPDATE-OSS]
+name=aliyun-mirror:13.2:UPDATE-OSS
+enabled=1
+autorefresh=1
+baseurl=http://mirrors.aliyun.com/opensuse/update/13.2
+type=rpm-md
+keeppackages=0

@@ -1,0 +1,8 @@
+[download.opensuse.org-Extra]
+name=openSUSE BuildService - KDE:Extra
+enabled=1
+autorefresh=1
+baseurl=http://download.opensuse.org/repositories/KDE:/Extra/openSUSE_13.2/
+path=/
+type=rpm-md
+keeppackages=0

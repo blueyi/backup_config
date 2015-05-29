@@ -1,0 +1,7 @@
+[USTCmirror:13.2:NON-OSS]
+name=USTCmirror:13.2:NON-OSS
+enabled=0
+autorefresh=1
+baseurl=http://mirrors.ustc.edu.cn/opensuse/distribution/13.2/repo/non-oss
+type=yast2
+keeppackages=0

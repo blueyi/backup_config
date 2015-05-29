@@ -1,0 +1,8 @@
+[download.opensuse.org-Education]
+name=openSUSE BuildService - Education
+enabled=1
+autorefresh=1
+baseurl=http://download.opensuse.org/repositories/Education/openSUSE_13.2/
+path=/
+type=rpm-md
+keeppackages=0

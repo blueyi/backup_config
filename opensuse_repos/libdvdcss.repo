@@ -1,0 +1,7 @@
+[libdvdcss]
+name=libdvdcss
+enabled=0
+autorefresh=1
+baseurl=http://opensuse-guide.org/repo/13.2/
+type=rpm-md
+keeppackages=0

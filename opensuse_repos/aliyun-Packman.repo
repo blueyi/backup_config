@@ -1,0 +1,7 @@
+[aliyun-Packman]
+name=aliyun-Packman
+enabled=1
+autorefresh=1
+baseurl=http://mirrors.aliyun.com/packman/openSUSE_13.2
+type=rpm-md
+keeppackages=0

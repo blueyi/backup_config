@@ -1,0 +1,8 @@
+[repo-update-non-oss]
+name=openSUSE-13.2-Update-Non-Oss
+enabled=0
+autorefresh=1
+baseurl=http://download.opensuse.org/update/13.2-non-oss/
+path=/
+type=NONE
+keeppackages=0

@@ -1,0 +1,7 @@
+[videolan]
+name=videolan
+enabled=0
+autorefresh=1
+baseurl=http://download.videolan.org/pub/vlc/SuSE/13.2/
+type=rpm-md
+keeppackages=0

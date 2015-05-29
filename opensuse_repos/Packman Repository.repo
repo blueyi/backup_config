@@ -1,0 +1,7 @@
+[Packman Repository]
+name=Packman Repository
+enabled=0
+autorefresh=1
+baseurl=http://ftp.gwdg.de/pub/linux/packman/suse/openSUSE_13.2/
+type=rpm-md
+keeppackages=0

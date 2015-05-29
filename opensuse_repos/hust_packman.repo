@@ -1,0 +1,8 @@
+[hust_packman]
+name=hust_packman
+enabled=0
+autorefresh=1
+baseurl=http://mirrors.hust.edu.cn/packman/suse/openSUSE_13.2/
+path=/
+type=rpm-md
+keeppackages=0

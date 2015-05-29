@@ -1,0 +1,7 @@
+[liming-wiznote]
+name=liming-wiznote
+enabled=1
+autorefresh=0
+baseurl=http://download.opensuse.org/repositories/home:/limingy/openSUSE_13.2
+type=rpm-md
+keeppackages=0
