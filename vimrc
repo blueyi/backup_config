@@ -151,6 +151,8 @@ Plugin 'gmarik/Vundle.vim'
 
     " Auto complete
      Plugin 'Valloric/YouCompleteMe.git' 
+     Plugin 'rdnetto/YCM-Generator.git' 
+
     " Plugin 'Shougo/neocomplete.vim.git'
 
     " lean & mean status/tabline for vim that's light as air  
@@ -530,7 +532,7 @@ inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
     let g:syntastic_auto_loc_list = 1
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
-    "let g:syntastic_python_python_exec = '/path/to/python3'
+    let g:syntastic_python_python_exec = '/usr/bin/python3'
     " support html5
     "let g:syntastic_html_tidy_exec = 'tidy5'
 
@@ -862,9 +864,17 @@ endfunc
 "-- For python development setting --
 
     " F9 run python 
-    map <F9> :!python % <CR>
-    imap <F9> <ESC>:!python % <CR>
+    map <F9> :!python3 % <CR>
+    imap <F9> <ESC>:!python3 % <CR>
 
+"-- For CUDA development setting --
+
+    " F7 compile cu file 
+    map <F7> :!nvcc % -o %< <CR>
+    imap <F7> <ESC>!nvcc % -o %< <CR>
+    " F8 run CUDA file 
+    map <F8> :!./%< <CR>
+    imap <F8> <ESC>!./%<  <CR>
 
 "                          << 以下为常用工具配置 >>
 " =============================================================================
