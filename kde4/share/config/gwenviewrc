@@ -1,0 +1,25 @@
+[KFileDialog Settings]
+Height 768=420
+Width 1366=683
+
+[MainWindow]
+Height 768=500
+State=AAAA/wAAAAD9AAAAAAAAAu4AAAHCAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1366=750
+
+[Recent Files]
+File1[$e]=$HOME/Pictures/Screenshot from 2015-04-21 06:54:42.png
+File2[$e]=$HOME/Pictures/Selection_003.jpg
+File3[$e]=$HOME/Pictures/Selection_003.png
+File4[$e]=$HOME/Downloads/youdao-dict_1.0.2~binary_amd64/src/app/assets/youdao-dict.png
+Name1[$e]=Screenshot from 2015-04-21 06:54:42.png
+Name2[$e]=Selection_003.jpg
+Name3[$e]=Selection_003.png
+Name4[$e]=youdao-dict.png
+
+[SideBar-BrowseMode]
+IsVisible=true
+
+[SideBar-ViewMode]
+IsVisible=false

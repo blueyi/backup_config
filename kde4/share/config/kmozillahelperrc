@@ -1,0 +1,9 @@
+[KFileDialog Settings]
+Height 768=420
+Recent Files[$e]=$HOME/Downloads/bookmarks.html,$HOME/goagent-3.2.3/local/CA.crt,./Downloads/1.ini
+Recent URLs[$e]=$HOME/Downloads/,./Downloads/,$HOME/goagent-3.2.3/local/
+Width 1366=683
+
+[Open-with settings]
+CompletionMode=5
+History=/usr/bin/wps %f

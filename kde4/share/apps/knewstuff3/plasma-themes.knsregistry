@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="">
+  <name>Diamond</name>
+  <providerid>https://api.opendesktop.org/v1/</providerid>
+  <author homepage="http://opendesktop.org/usermanager/search.php?username=staffck1">staffck1</author>
+  <homepage>https://opendesktop.org/content/show.php?content=153930</homepage>
+  <licence>1</licence>
+  <version>2.0.3</version>
+  <rating>89</rating>
+  <downloads>10500</downloads>
+  <installedfile>/tmp/kde-blueyi///153930-Diamond.tar.gz</installedfile>
+  <id>153930</id>
+  <releasedate>2014-08-27</releasedate>
+  <summary>Transparent theme for KDE 4.x&#xd;
+&#xd;
+Please donate! &#xd;
+&#xd;
+&#xd;
+P.S. Council to install:Â Â Â  &#xd;
+      - &amp;quot;Diamond 1.0.1&amp;quot;, Window Decoration Aurorae section&#xd;
+      - &amp;quot;Diamond_Green 1.0&amp;quot;, KDE 4.x Splash Screen section&#xd;
+      - &amp;quot;Diamond KDM&amp;quot;, KDM Themes section</summary>
+  <changelog></changelog>
+  <preview>https://openDesktop.org/CONTENT/content-m1/m153930-1.png</preview>
+  <previewBig>https://openDesktop.org/CONTENT/content-pre1/153930-1.png</previewBig>
+  <payload>https://opendesktop.org/CONTENT/content-files/153930-Diamond.tar.gz</payload>
+  <status>installed</status>
+ </stuff>
+ <stuff category="">
+  <name>Glassified</name>
+  <providerid>https://api.opendesktop.org/v1/</providerid>
+  <author homepage="http://opendesktop.org/usermanager/search.php?username=painkiller101">painkiller101</author>
+  <homepage>https://opendesktop.org/content/show.php?content=81388</homepage>
+  <licence>1</licence>
+  <version>4.1.0</version>
+  <rating>87</rating>
+  <downloads>48508</downloads>
+  <installedfile>/tmp/kde-blueyi///81388-Glassified.tar.gz</installedfile>
+  <id>81388</id>
+  <releasedate>2010-02-15</releasedate>
+  <summary>This is a glassified Plasma Theme.&#xd;
+&#xd;
+Version 4 should be ready and compatible with the latest KDE SC 4.4.&#xd;
+If you can find problems or bugs. tell me please.&#xd;
+&#xd;
+&#xd;
+See also:&#xd;
+Glassified Splash&#xd;
+http://kde-look.org/content/show.php?content=84124&#xd;
+&#xd;
+Glassified KDM&#xd;
+http://kde-look.org/content/show.php?content=99841&#xd;
+&#xd;
+I hope you like it and leave a comment if you want!&#xd;
+&#xd;
+</summary>
+  <changelog></changelog>
+  <preview>https://openDesktop.org/CONTENT/content-m1/m81388-1.png</preview>
+  <previewBig>https://openDesktop.org/CONTENT/content-pre1/81388-1.jpg</previewBig>
+  <payload>https://opendesktop.org/CONTENT/content-files/81388-Glassified.tar.gz</payload>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

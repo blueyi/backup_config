@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>menuConfig</class>
+ <widget class="QWidget" name="menuConfig">
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="launcherTab">
+      <attribute name="title">
+       <string>&amp;Launcher</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="iconHorizontalLayout">
+         <item>
+          <widget class="QLabel" name="iconLabel">
+           <property name="text">
+            <string>Choose launcher &amp;icon:</string>
+           </property>
+           <property name="buddy">
+            <cstring>iconButton</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="KLineEdit" name="kcfg_icon">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="KIconButton" name="iconButton"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="launcherVerticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>195</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="menusTab">
+      <attribute name="title">
+       <string>&amp;Menus</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QCheckBox" name="kcfg_favoritesVisible">
+         <property name="text">
+          <string>Show &amp;favorites list</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_resetOnShow">
+         <property name="text">
+          <string>&amp;Reset menu each time it is shown</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_scrollOverBounds">
+         <property name="text">
+          <string>Menu lists can be scrolled &amp;outside of their bounds (nicer animation)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_showDescription">
+         <property name="text">
+          <string>Show &amp;description in each menu entry</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_checkEmptySubmenusThoroughly">
+         <property name="text">
+          <string>Check more thoroughly for &amp;empty submenus to hide them (slower startup!)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QFormLayout" name="iconSizeFormLayout">
+         <property name="fieldGrowthPolicy">
+          <enum>QFormLayout::ExpandingFieldsGrow</enum>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="iconSizeLabel">
+           <property name="text">
+            <string>Icon &amp;size:</string>
+           </property>
+           <property name="buddy">
+            <cstring>kcfg_iconSize</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="kcfg_iconSize"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="smallIconSizeLabel">
+           <property name="text">
+            <string>S&amp;mall icon size:</string>
+           </property>
+           <property name="buddy">
+            <cstring>kcfg_smallIconSize</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="kcfg_smallIconSize"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="leaveButtonsIconSizeLabel">
+           <property name="text">
+            <string>&amp;Leave buttons icon size:</string>
+           </property>
+           <property name="buddy">
+            <cstring>kcfg_leaveButtonsIconSize</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QSpinBox" name="kcfg_leaveButtonsIconSize"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="numOfColumnsLabel">
+           <property name="text">
+            <string>Number of &amp;columns:</string>
+           </property>
+           <property name="buddy">
+            <cstring>kcfg_numOfColumns</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QSpinBox" name="kcfg_numOfColumns">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>6</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="menusVerticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>6</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="leaveButtonsTab">
+      <attribute name="title">
+       <string>Leave &amp;Buttons</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QCheckBox" name="kcfg_lockButtonVisible">
+         <property name="text">
+          <string>Loc&amp;k screen</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_leaveButtonVisible">
+         <property name="text">
+          <string>Lea&amp;ve (select choice in confirmation dialog)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_logOutButtonVisible">
+         <property name="text">
+          <string>Lo&amp;g out (no confirmation)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_turnOffButtonVisible">
+         <property name="text">
+          <string>&amp;Turn off computer (no confirmation)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_restartButtonVisible">
+         <property name="text">
+          <string>R&amp;estart computer (no confirmation)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_suspendToRamButtonVisible">
+         <property name="text">
+          <string>Slee&amp;p (Suspend to RAM)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_suspendToDiskButtonVisible">
+         <property name="text">
+          <string>Hi&amp;bernate (Suspend to Disk)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="kcfg_switchUserButtonVisible">
+         <property name="text">
+          <string>S&amp;witch user</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="leaveButtonsVerticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KIconButton</class>
+   <extends>QPushButton</extends>
+   <header>kicondialog.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>klineedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>iconButton</sender>
+   <signal>iconChanged(QString)</signal>
+   <receiver>kcfg_icon</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>192</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

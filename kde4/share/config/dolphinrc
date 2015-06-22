@@ -1,0 +1,38 @@
+[CompactMode]
+FontWeight=50
+
+[DetailsMode]
+FontWeight=50
+
+[General]
+Version=200
+ViewPropsTimestamp=2015,5,24,23,44,47
+
+[IconsMode]
+FontWeight=50
+IconSize=16
+
+[KPropertiesDialog]
+Height 768=390
+Width 1366=439
+
+[MainWindow]
+Height 768=769
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAC6AAACt/wCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAgBAAAF+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAeAAACtwAAAFABAAAFAAAAAQAAALoAAAK3/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAQAAAB4AAAK3AAAA9QEAAAUAAAADAAAAAAAAAAD8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAA/////wAAAAgBAAAFAAAD3AAAArcAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Width 1366=1367
+
+[Open-with settings]
+CompletionMode=5
+History=kchmviewer
+
+[PreviewSettings]
+Plugins=directorythumbnail,imagethumbnail,jpegthumbnail
+
+[SettingsDialog]
+Height 768=344
+Width 1366=512
+
+[kuick-copy]
+Paths[$e]=$HOME/Downloads

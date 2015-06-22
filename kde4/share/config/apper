@@ -1,0 +1,18 @@
+[BrowseView]
+ShowApplicationVersions=true
+
+[FilterMenu]
+FilterNative=true
+FilterNewest=true
+
+[SessionInstaller]
+Height 768=280
+Width 1366=430
+
+[UpdateView]
+ShowSizes=true
+ShowVersions=true
+
+[requirementsDialog]
+Height 768=599
+Width 1366=600

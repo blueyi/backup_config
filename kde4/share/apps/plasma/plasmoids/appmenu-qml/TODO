@@ -1,0 +1,15 @@
+Bugs I don't have control over (because of limitations in Qt or Plasma):
+- make configuring the plasmoid's icon more elegant by showing the current
+  icon on the button that launches the "Change icon" dialog and by removing
+  the text field holding the icon's name (only possible when KConfigXT finally
+  supports Icon)
+- provide a command line to open/close the menu
+- maybe add "Recent Documents" section (below Favorites?) (only possible when
+  a dataengine implementing this functionality exists)
+- allow to modify the ordering of the "leave" buttons (must find a way in
+  KConfig XT to do this)
+For the following a hackish solution is implemented (the non-hackish solution
+is currently not implementable because of limitations in Qt or Plasma):
+- use powermanagement dataengine instead of qdbus (only possible when the
+  modifications in the plasma/viranch/powermanagementservices branch and
+  more are merged in git:kde-workspace master)

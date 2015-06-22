@@ -1,0 +1,6 @@
+[Desktop Entry]
+Icon=inode-directory
+Name=Dropbox
+Type=Link
+URL[$e]=file://$HOME/Desktop/Dropbox
+X-KDE-LastOpenedWith=dolphin

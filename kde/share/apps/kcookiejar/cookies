@@ -1,0 +1,5 @@
+# KDE Cookie File v2
+#
+# Host               Domain               Path         Exp.date   Prot Name                 Sec  Value
+[.wikia.com]
+lyrics.wikia.com     ".wikia.com"         "/"          1445255214    0 wikia_beacon_id      4    pVpPlAEtbN

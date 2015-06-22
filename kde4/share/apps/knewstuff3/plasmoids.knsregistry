@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="">
+  <name>EG-SysMon-QC</name>
+  <providerid>https://api.opendesktop.org/v1/</providerid>
+  <author homepage="http://opendesktop.org/usermanager/search.php?username=EGG01">EGG01</author>
+  <homepage>https://opendesktop.org/content/show.php?content=114504</homepage>
+  <licence>1</licence>
+  <version>1.0</version>
+  <rating>92</rating>
+  <downloads>21774</downloads>
+  <installedfile>/tmp/kde-blueyi///114504-EG-SysMon-QC.skz</installedfile>
+  <id>114504</id>
+  <releasedate>2009-10-29</releasedate>
+  <summary>Super carramba theme.&#xd;
+I just looked for system monitor plasmoids, but nothig liked me found, so i took a lot of them and rework. This is my first release, so any suggestions welcome. &#xd;
+Sorry for my poor english.</summary>
+  <changelog></changelog>
+  <preview>https://openDesktop.org/CONTENT/content-m1/m114504-1.png</preview>
+  <previewBig>https://openDesktop.org/CONTENT/content-pre1/114504-1.png</previewBig>
+  <payload>https://opendesktop.org/CONTENT/content-files/114504-EG-SysMon-QC.skz</payload>
+  <status>installed</status>
+ </stuff>
+ <stuff category="">
+  <name>Plasma Google Now</name>
+  <providerid>https://api.opendesktop.org/v1/</providerid>
+  <author homepage="http://opendesktop.org/usermanager/search.php?username=anilet">anilet</author>
+  <homepage>https://opendesktop.org/content/show.php?content=166754</homepage>
+  <licence>1</licence>
+  <version>0.1</version>
+  <rating>61</rating>
+  <downloads>598</downloads>
+  <installedfile>/tmp/kde-blueyi///166754-plasma_google_now.plasmoid</installedfile>
+  <id>166754</id>
+  <releasedate>2014-08-31</releasedate>
+  <summary>Approximate recreation of Conky Google Now widget from http://satya164.deviantart.com/art/Conky-Google-Now-366545753. Art work and Icons copied from Conky widget.&#xd;
+&#xd;
+Modified from Yahoo weather widget http://kde-look.org/content/show.php/Yahoo%21+Weather+Widget?content=164194.&#xd;
+&#xd;
+Network widget copied from Network management&#xd;
+All credit goes to original content creators.&#xd;
+&#xd;
+Not figured out how to remove the frame around the widget, Anybody knows how please comment.&#xd;
+&#xd;
+No configuration options yet, You will have to change the WOEID on the qml file itself.&#xd;
+Change it at ~/.kde/share/apps/plasma//plasmoids/plasma_google_now/contents/code/Yahoo.qml line no 79&#xd;
+</summary>
+  <changelog>0.1&#xd;
+First release&#xd;
+ &#xd;
+0.2&#xd;
+Fixed hard coded image&#xd;
+Configuration is working now&#xd;
+Light and Dark themes</changelog>
+  <preview>https://openDesktop.org/CONTENT/content-m1/m166754-1.png</preview>
+  <previewBig>https://openDesktop.org/CONTENT/content-pre1/166754-1.png</previewBig>
+  <payload>https://opendesktop.org/CONTENT/content-files/166754-plasma_google_now.plasmoid</payload>
+  <status>installed</status>
+ </stuff>
+ <stuff category="">
+  <name>plasma_pyweather</name>
+  <providerid>https://api.opendesktop.org/v1/</providerid>
+  <author homepage="http://opendesktop.org/usermanager/search.php?username=rangalo">rangalo</author>
+  <homepage>https://opendesktop.org/content/show.php?content=110137</homepage>
+  <licence>1</licence>
+  <version>1.7</version>
+  <rating>90</rating>
+  <downloads>6635</downloads>
+  <installedfile>/tmp/kde-blueyi///110137-plasma_pyweather.plasmoid</installedfile>
+  <id>110137</id>
+  <releasedate>2010-07-09</releasedate>
+  <summary>This is an extremely simple plasmoid written in python. It fetches weather information from google.com. It lets you configure the location and unit of the weather information. &#xd;
+&#xd;
+Please feel free to send me bug reports and / or suggestions for improvement.&#xd;
+&#xd;
+&#xd;
+INSTALL:&#xd;
+$ plasmapkg -i plasma_pyweather.plasmoid&#xd;
+&#xd;
+UPDATE:&#xd;
+I used the weather icons from here.&#xd;
+http://www.kde-look.org/content/show.php/Weather+Icons?content=84533&#xd;
+&#xd;
+So, the credit goes to the original artist, painkiller10.&#xd;
+&#xd;
+Note: I have implemented only for certain number of weather conditions, if you see a question mark image as weather conditions, please let me know, which condition it is and I will add the image for it.&#xd;
+&#xd;
+</summary>
+  <changelog>2010-07-09:&#xd;
+For version: 1.7 &#xd;
+- Fixed a typo&#xd;
+- Now doesn't crash when running without internet&#xd;
+&#xd;
+2010-03-04:&#xd;
+For version: 1.6&#xd;
+&#xd;
+- Fixed the bug with wrong calculation of Imperial units&#xd;
+- Changed the name of the images from *.svgz to *.svg, because the new KDE - 4.4 stupidly considered all *.svgz files as gzip file and showed no images&#xd;
+&#xd;
+&#xd;
+&#xd;
+2010-01-18:&#xd;
+For Version: 1.5&#xd;
+Changed the names of the units from US t Imperial and SI to Metric to be technically correct.&#xd;
+&#xd;
+WARNING: If you already have an old config, you will get N/A for all temperatures until you select the proper unit system from the settings.&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+2010-01-13:&#xd;
+For Version 1.4:&#xd;
+Raffaele kindly submitted a patch for the bug fix. I didn't even know about the bug as it appears only for certain cities. Now the plasmoid can deal with incorrect format of wind condition.&#xd;
+&#xd;
+&#xd;
+&#xd;
+For version 1.3&#xd;
+- Fixed the bug in Kubuntu. Now it is possible to save settings.&#xd;
+- Added new conditions for overcast, smoky and snow&#xd;
+&#xd;
+for version 1.2&#xd;
+&#xd;
+- Bug Fix:&#xd;
+Although, I could not reproduce the bug reported by many, about th configuration, I hope to have fixed it.&#xd;
+&#xd;
+For version 1.1&#xd;
+- Bug Fix:&#xd;
+&#xd;
+Now, the parameters are url-encoded to allow city names  with spaces, thanks to  Virginia Brassesco for pointing out the bug.</changelog>
+  <preview>https://openDesktop.org/CONTENT/content-m1/m110137-1.png</preview>
+  <previewBig>https://openDesktop.org/CONTENT/content-pre1/110137-1.png</previewBig>
+  <payload>https://opendesktop.org/CONTENT/content-files/110137-plasma_pyweather.plasmoid</payload>
+  <status>installed</status>
+ </stuff>
+ <stuff category="">
+  <name>Sensors-Monitor</name>
+  <providerid>https://api.opendesktop.org/v1/</providerid>
+  <author homepage="http://opendesktop.org/usermanager/search.php?username=Argonavt">Argonavt</author>
+  <homepage>https://opendesktop.org/content/show.php?content=111150</homepage>
+  <licence>1</licence>
+  <version>0.1</version>
+  <rating>90</rating>
+  <downloads>7333</downloads>
+  <installedfile>/tmp/kde-blueyi///111150-sensors.skz</installedfile>
+  <id>111150</id>
+  <releasedate>2011-09-15</releasedate>
+  <summary>This is my first widget.&#xd;
+&#xd;
+Attention! I tested it only on debian squeeze, kde 4.3.0&#xd;
+&#xd;
+sensors.skz&#xd;
+&#xd;
+Sensors-Monitor: &#xd;
+eth0 - IN Kb; &#xd;
+eth0 - OUT Kb; &#xd;
+CPU - Core0 %, &#xd;
+CPU - Core1 %; &#xd;
+CPU temp Â°C;&#xd;
+HDD temp Â°C;&#xd;
+NVIDIA temp Â°C; &#xd;
+RAM free Kb;&#xd;
+&#xd;
+Install:&#xd;
+Rename the 111150-sensors.skz in sensors.skz&#xd;
+&#xd;
+plasmapkg --type superkaramba --install sensors.skz&#xd;
+&#xd;
+Remove:&#xd;
+plasmapkg -r sk_sensors&#xd;
+&#xd;
+Or you can install using superkaramba.</summary>
+  <changelog>Sorry all, now I do not support the application of Linux and KDE too :)&#xd;
+&#xd;
+... currently I'm using OS X</changelog>
+  <preview>https://openDesktop.org/CONTENT/content-m1/m111150-1.png</preview>
+  <previewBig>https://openDesktop.org/CONTENT/content-pre1/111150-1.jpg</previewBig>
+  <payload>https://opendesktop.org/CONTENT/content-files/111150-sensors.skz</payload>
+  <status>installed</status>
+ </stuff>
+ <stuff category="">
+  <name>AppMenu QML</name>
+  <providerid>https://api.opendesktop.org/v1/</providerid>
+  <author homepage="http://opendesktop.org/usermanager/search.php?username=glad">glad</author>
+  <homepage>https://opendesktop.org/content/show.php?content=146098</homepage>
+  <licence>1</licence>
+  <version>1.6</version>
+  <rating>88</rating>
+  <downloads>7425</downloads>
+  <installedfile>/tmp/kde-blueyi///146098-plasma-applet-appmenu-qml-1.6.plasmoid</installedfile>
+  <id>146098</id>
+  <releasedate>2013-07-31</releasedate>
+  <summary>This plasmoid shows a menu of the installed applications, similar to Lancelot but much simpler.  The purpose of the simpleness is to have a faster plasmoid which also loads faster.  The plasmoid also has a list of favorites and you can search applications by application name.  There are &amp;quot;Lock Session&amp;quot;, &amp;quot;Leave&amp;quot; and &amp;quot;Switch User&amp;quot; and other similar buttons.  Other features:&#xd;
+- the number of visible columns can be changed (between 1 and 4);&#xd;
+- the favorites section can be hidden;&#xd;
+- the favorites list can be locked;&#xd;
+- the size of all visible icons can be changed;&#xd;
+- closing and opening the menu remembers its state (configurable);&#xd;
+- change launcher icon;&#xd;
+- configure which &amp;quot;leave&amp;quot; buttons are shown (or show none at all);&#xd;
+- the favorites list can be reordered using drag-and-drop;&#xd;
+- the menu items can be dragged and dropping them on a panel or on the desktop creates a shortcut there.&#xd;
+&#xd;
+The plasmoid can be completely manipulated with the keyboard only except for the buttons at the bottom wich must be clicked with the mouse.  The menu can be browsed with the arrow keys and PageUp and PageDown, a favorite can be added with the + or = key and removed with the - key, to search an application by its name, just start typing the name.&#xd;
+&#xd;
+This plasmoid is entirely written in QML + JavaScript.&#xd;
+&#xd;
+Note: this plasmoid requires KDE 4.8.0 or higher. For correct resizing of the &amp;quot;Leave&amp;quot; buttons, KDE 4.9.0 is required.&#xd;
+&#xd;
+Bugs I don't have control over (because of limitations in Qt or Plasma):&#xd;
+- make configuring the plasmoid's icon more elegant by showing the current icon on the button that launches the &amp;quot;Change icon&amp;quot; dialog and by removing the text field holding the icon's name (only possible when KConfigXT finally supports Icon)&#xd;
+- provide a command line to open/close the menu&#xd;
+- maybe add &amp;quot;Recent Documents&amp;quot; section (below Favorites?); there is no Plasma DataEngine for this, so I cannot do it&#xd;
+- allow to modify the ordering of the &amp;quot;leave&amp;quot; buttons (must find a way in&#xd;
+  KConfig XT to do this)&#xd;
+</summary>
+  <changelog></changelog>
+  <preview>https://openDesktop.org/CONTENT/content-m1/m146098-1.png</preview>
+  <previewBig>https://openDesktop.org/CONTENT/content-pre1/146098-1.jpg</previewBig>
+  <payload>https://opendesktop.org/CONTENT/content-files/146098-plasma-applet-appmenu-qml-1.6.plasmoid</payload>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>

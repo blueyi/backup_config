@@ -1,0 +1,25 @@
+How to debug delegates:
+-----------------------
+
+In order to debug constructions like:
+
+ListView {
+	delegate: MenuItem {
+		property string source
+		name: modelData["name"]
+		isFavorite: main.favoritesSources.indexOf(source) >= 0
+	}
+}
+
+the following tricks may be useful:
+
+ListView {
+	delegate: MenuItem {
+		property string source
+		name: modelData["name"]
+		isFavorite: main.favoritesSources.indexOf(source) >= 0
+
+		Component.onCompleted: console.log(name);
+		onIsFavoriteChanged: console.log(isFavorite);
+	}
+}

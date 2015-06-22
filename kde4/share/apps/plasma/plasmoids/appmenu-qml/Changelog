@@ -1,0 +1,183 @@
+version 1.6 (2013-07-31):
+- do not show the "Add favorite" and "Remove favorite" buttons in the
+  search menu when the favorites are locked
+- the "Add Favorite" and "Remove Favorite" buttons are not visible anymore
+  if the favorites section is hidden
+- dragging an application from the menu to the panel or the desktop creates
+  a shortcut there
+- the favorites can be reordered using drag-and-drop
+version 1.5.1 (2013-03-07):
+- correct some small mistakes in the Italian translation (by Vincenzo Reale)
+version 1.5 (2013-02-12):
+- fix bug: when the search text field is focused, pressing the left
+  or right arrow key doesn't focus the menu, leading to unexpected
+  behavior
+- fix bug: if the search field is emptied (using the Backspace key)
+  when an item in the search list is focused, then the main menu is
+  not focused, so the left and right arrow keys don't work
+- add option to hide the description in the menu items
+- add option to check more thoroughly for empty submenus to hide them
+  (by default some effort is already done to hide the empty submenus,
+  but the search for empty submenus is not comprehensive); this however
+  leads to a slower startup of the plasmoid
+- when the plasmoid is added to the desktop and it is activated (using
+  a keyboard shortcut), then the search field is automatically focused
+  (this seems to work only when there are no open windows or when the
+  dashboard is shown)
+- restore feature: show tooltips for the "Leave" buttons when the text
+  is not shown on them
+- add Brazilian Portuguese translation (by André Marcelo Alvarenga)
+- update French, German and Italian translation (by their authors)
+version 1.4 (2013-01-14):
+- reimplement the search using a PlasmaCore.SortFilterModel so that it
+  is faster (there is however a lag on the first search because the model
+  must then be loaded; the other possibility would be to load the model
+  at startup of the plasmoid, but IMHO Plasma loads already slow enough)
+- add PageUp and PageDown support in the menus
+- reimplementation of the "Leave" toolbar
+- fix bug: when an app which is also a favorite is uninstalled (e.g. at
+  the transition KMail -> KMail2, KOffice -> Calligra, OpenOffice ->
+  LibreOffice, when the user switches from Firefox to Google Chrome, or
+  from Konqueror to Rekonq, ...), at the next restart of the plasmoid only
+  this entry will be removed from the favorites list instead of uncleanly
+  failing to load the entire favorites list
+- add option to have "Sleep" (Suspend to RAM) and "Hibernate" (Suspend to
+  Disk) buttons
+- specify a preferred width of the plasmoid and have the minimum width
+  smaller than this
+- update translations (by their authors)
+version 1.3 (2012-10-10):
+- make the menu close after the user clicks/opens a program
+- make the "Menu Editor", "Lock Favorites" and "Unlock Favorites" items
+  in the plasmoid's context menu work again in KDE Plasma 4.9.2 when
+  using systemd
+- show a tooltip when the user hovers the plasmoid's icon in a panel
+  when KDE Plasma from git is used (I guess that it will work in KDE
+  Plasma 4.10)
+version 1.2 (2012-09-19):
+- the gap between the menu and the "Leave" buttons is larger now.
+- allow to hide unwanted "Leave" buttons (or hide even all of them)
+- new "Leave" buttons: "Log Out", "Turn Off Computer" and "Restart",
+  all without showing a confirmation dialog
+- update translations (by their authors)
+version 1.1 (2012-08-17):
+- the favorites list can be locked; when unlocked (the default),
+  the "Add favorite", "Remove favorite", "Move favorite up",
+  "Move favorite down" buttons remain always visible
+- replace our customized versions of PlasmaComponents.Button and
+  PlasmaComponents.ToolButton with other items which are easier to
+  maintain and which rely more on the standard components
+- show tooltips for the "Leave" buttons when the text is not shown on them
+- some optimization by not loading unnecessary favorites management buttons
+  and arrow images in the menus
+- update translations (by their authors)
+version 1.0 (2012-06-29):
+- no changes since beta
+version 1.0-beta (2012-04-25):
+- add Greek translation (by Antonis Geralis)
+- update Italian translation (by Francesco Marinucci)
+- add German translation (by Susan Janet Voitel)
+- allow entering "+", "-" and "=" in the search field without adding or
+  removing a favorite; when the search field is not focused but the search
+  results are, then using these keys adds or removes a favorite
+- remove bug: switching to too deep submenus makes the plasmoid forget the
+  highlighted item in the favorites list and main menus
+version 0.7.6 (2012-04-05):
+- remove bug: the small icon size is obeyed by none of the small icons
+- add option to change the icon size of the leave buttons
+- remove bug: in KDE Plasma 4.8.2 the implementation of
+  PlasmaComponents.Highlight has changed (improved), making the highlight
+  fit too tight to the item it is highlighting
+- remove other bugs in the implementation of the highlight
+version 0.7.5 (2012-04-02):
+- opening submenus is faster now (but the area for non-existing submenus is
+  now not hidden anymore)
+- respect "NoDisplay=true" in .desktop files
+- add option to reset menu to its original state each time it is shown
+version 0.7.4 (2012-03-28):
+- add Italian translation (by Francesco Marinucci)
+- allow up to 4 levels of submenus (previously only 2 levels of submenus
+  were allowed)
+- hide area for non-existing submenus
+version 0.7.3 (2012-03-18):
+- remove bug: adding or removing favorites when in search mode doesn't work
+- add possibility to hide the favorites section
+- add translations
+version 0.7.2 (2012-03-15):
+- have a smaller minimumWidth when in one-column mode
+- remove bug: icon of the launcher remains the same when changed in the
+  configuration dialog
+version 0.7.1 (2012-03-11):
+- add option to change the number of visible columns (between 1 and 4)
+version 0.7 (2012-03-08):
+- use Plasma Components instead of Plasma Widgets (requires KDE Plasma 4.8+)
+- remove bug: when favorites are reordered, the reordering is not remembered
+  when Plasma is restarted
+- change service type to Plasma/PopupApplet
+- the menu disappears when it loses focus
+- the menu window is resizable by dragging its border
+- the search field is focused automatically when the menu is shown
+- even when the search field is focused, the menu can be browsed with the
+  arrow keys
+- even when the menus are focused, a search can be triggered just by pressing
+  a key containing a valid character
+version 0.6 (2011-11-02):
+- make sure that switching to submenus doesn't make the plasmoid forget the
+  highlighted item in the favorites list and main menus
+- add "move up" and "move down" icons to each item in the favorites list,
+  so reordering the favorites is now possible
+- make the size of the icons in the menus configurable
+- make the size of the popup window configurable
+version 0.5.5 (2011-10-31):
+- make sure that entering characters in the search field doesn't block the
+  user interface anymore
+- remove option to switch between search while typing and search only when
+  Enter is pressed (because of the above and for better maintainability of
+  the code)
+version 0.5.4 (2011-10-24):
+- add option to stop scrolling the menus at their boundaries
+- add option to switch between search while typing and search only when
+  Enter is pressed
+- add margins so that the menus aren't squeezed to the left screen border
+version 0.5.3 (2011-10-21):
+- in order for the slowness of the search not to be too invasive, the search
+  is not performed anymore on the fly when the search field is edited, but
+  only when enter is pressed
+version 0.5.2 (2011-10-20):
+- remove bug: search doesn't show the applications for which the first word
+  of the name, generic name or description matches the search string
+version 0.5.1 (2011-10-18):
+- partially remove bug (introduced by the patch of Onur-Hayri Bakici): the
+  keys didn't work anymore; now the keys work again after first clicking
+  in the search field
+version 0.5 (2011-10-18):
+- add option to change the icon of the launcher button (until KConfigXT
+  finally supports Icon, a workaround is used which causes the bug that
+  the button in the configuration dialog which is used to change the icon
+  doesn't show the icon when the configuration dialog is made visible)
+- remove bug (thanks Onur-Hayri Bakici for the patch): when the popup window
+  of the plasmoid is opened, it appears as a separate entry in the taskbar
+version 0.4 (2011-10-17):
+- since using Plasma/PopupApplet in metadata.desktop doesn't work in KDE 4.7,
+  we use a workaround to make sure that there is only a button in the taskbar
+  which when pressed pops the menu up
+- use qdbus instead of the power management data engine until the
+  modifications in the plasma/viranch/powermanagementservices branch
+  are merged in git:kde-workspace master
+- enable the usage of the up and down cursor keys and the Enter key when
+  the search field is focused
+- the search also looks for matches in the GenericName and Comment fields
+  of the desktop files of the installed applications
+version 0.3 (2011-10-12):
+- make the favorites list persistent throughout sessions
+- work around bug: in KDE 4.7 the menu is not loaded at startup
+- add breadcrumb
+- faster switching to submenus
+version 0.2 (2011-08-24):
+- allow to enter a search string even if the search input field is not
+  focussed
+- change the "Add favorite" button to a "Remove favorite" button if the
+  menu entry is in the favorites list
+- allow to add and remove favorites using + or = and - respectively
+version 0.1 (2011-07-15):
+- first version

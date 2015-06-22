@@ -1,0 +1,15 @@
+# KDE Cookie File v2
+#
+# Host               Domain               Path         Exp.date   Prot Name                 Sec  Value
+[.wikia.com]
+lyrics.wikia.com     ".wikia.com"         "/"          1445255214    0 wikia_beacon_id      4    pVpPlAEtbN
+[.wikipedia.org]
+en.wikipedia.org     ""                   "/"          1436140800    0 WMF-Last-Access      6    04-Jun-2015
+[.maxmind.com]
+geolite.maxmind.com  ".maxmind.com"       "/"          1464254617    0 __cfduid             6    d2d26f0ba1dd937ce4ca3c407e87cd0dd1432718617
+[.developer.nvidia.com]
+developer.nvidia.com ".developer.nvidia.com" "/"          1495851994    0 __utma               4    206265990.285312811.1432779973.1432779973.1432779973.1
+developer.nvidia.com ".developer.nvidia.com" "/"          1448547994    0 __utmz               4    206265990.1432779973.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+developer.nvidia.com ".developer.nvidia.com" "/"          1495851994    0 __utmv               4    206265990.|1=Role%20by%20visit=anonymous%20user=1
+[.taobao.com]
+maxwi.taobao.com     ".taobao.com"        "/"          1465294691    0 thw                  4    cn

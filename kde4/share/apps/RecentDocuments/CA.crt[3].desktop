@@ -1,0 +1,6 @@
+[Desktop Entry]
+Icon=application-pkix-cert
+Name=CA.crt
+Type=Link
+URL[$e]=file://$HOME/goagent-3.2.3/local/CA.crt
+X-KDE-LastOpenedWith=kmozillahelper
