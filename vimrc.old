@@ -32,8 +32,8 @@ endif
 " -----------------------------------------------------------------------------
 if (g:iswindows && g:isGUI)
     source $VIMRUNTIME/vimrc_example.vim
-"    source $VIMRUNTIME/mswin.vim
- "   behave mswin
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
     set diffexpr=MyDiff()
 
     function MyDiff()
@@ -150,16 +150,18 @@ Plugin 'gmarik/Vundle.vim'
 "My Plugin
 
     " Auto complete
-    " Plugin 'Valloric/YouCompleteMe.git'
-    Plugin 'Shougo/neocomplete.vim.git'
+     Plugin 'Valloric/YouCompleteMe.git' 
+     Plugin 'rdnetto/YCM-Generator.git' 
 
-    " lean & mean status/tabline for vim that's light as air
+    " Plugin 'Shougo/neocomplete.vim.git'
+
+    " lean & mean status/tabline for vim that's light as air  
     Plugin 'bling/vim-airline.git'
 
     " insert mode auto-completion for quotes, parens, brackets, etc.
     Plugin 'Raimondi/delimitMate.git'
 
-    " Syntax checking hacks for vim
+    " Syntax checking hacks for vim 
     Plugin 'scrooloose/syntastic'
 
     " The ultimate snippet solution for Vim
@@ -185,7 +187,7 @@ Plugin 'gmarik/Vundle.vim'
     Plugin 'godlygeek/tabular'
     Plugin 'plasticboy/vim-markdown'
 
-    "intensely orgasmic commenting
+    "intensely orgasmic commenting  
     Plugin 'scrooloose/nerdcommenter'
 
     " visualize your Vim undo tree
@@ -197,7 +199,7 @@ Plugin 'gmarik/Vundle.vim'
     "automatically adjusts 'shiftwidth' and 'expandtab' heuristically based on the current file
     Plugin 'tpope/vim-sleuth'
 
-    "Open URI with your favorite browser from your most favorite editor
+    "Open URI with your favorite browser from your most favorite editor 
     Plugin 'tyru/open-browser.vim'
 
     "Alternate Files quickly (.c --> .h etc)
@@ -209,16 +211,13 @@ Plugin 'gmarik/Vundle.vim'
     "A tree explorer plugin for vim.
     Plugin 'scrooloose/nerdtree'
 
-    "Simple templates plugin for Vim
-    Plugin 'aperezdc/vim-template'
-
 
 
     "********************************************
     " Color schemes
     Plugin 'blueyi/myvimcolors'
     Plugin 'tomasr/molokai'
-    Plugin 'flazz/vim-colorschemes'
+   " Plugin 'flazz/vim-colorschemes'
 "********************************************
 
 
@@ -239,12 +238,11 @@ filetype plugin indent on    " required
 
 " -----------------------------------------------------------------------------
 "vim comfigure
-"
 
 "-- Chinese encoding support --
 " 注：使用utf-8格式后，软件与程序源码、文件路径不能有中文，否则报错
 set encoding=utf-8                                    "设置gvim内部编码
-"set fileencoding=utf-8                                "设置当前文件编码
+set fileencoding=utf-8                                "设置当前文件编码
 set fileencodings=cs-bom,utf-8,cp936,gb2312,gb18030,big5,euc-jp,euc-kr,latin1     "设置支持打开的文件的编码
 
 "--fileformat，默认 ffs=dos,unix--
@@ -257,9 +255,7 @@ if (g:iswindows && g:isGUI)
     source $VIMRUNTIME/menu.vim
 
     "解决consle输出乱码
-    "language messages zh_CN.utf-8
-    let $LANG='en' "set messages language
-    set langmenu=en "set menu's language of gvim
+    language messages zh_CN.utf-8
 endif
 
 "--Other vim setting--
@@ -273,7 +269,7 @@ filetype plugin indent on               "启用缩进
     "set smartindent        " 智能对齐方式
     set tabstop=4        " 设置制表符(tab键)的宽度
 set expandtab            "将Tab键转换为空格
-    set softtabstop=4     " 设置软制表符的宽度
+    set softtabstop=4     " 设置软制表符的宽度    
     set shiftwidth=4    " (自动) 缩进使用的4个空格
     set cindent            " 使用 C/C++ 语言的自动缩进方式
     set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s     "设置C/C++语言的具体缩进方式
@@ -334,11 +330,19 @@ endif
 " 设置代码配色方案
 " set t_Co=256
 if g:isGUI
-"    colorscheme Tomorrow-Night-Eighties               "Gvim配色方案
-     " colorscheme molikai
-     colorscheme solarized
+    " colorscheme Tomorrow-Night-Eighties               "Gvim配色方案
+    " colorscheme molokai
+    set background=dark
+    colorscheme solarized
 else
-    colorscheme Tomorrow-Night-Eighties               "终端配色方案
+    "colorscheme Tomorrow-Night-Eighties               "终端配色方案
+    
+    let g:molokai_original = 1
+    let g:rehash256 = 1
+    colorscheme molokai
+
+    "set background=dark
+    "colorscheme solarized
 endif
 
 " 显示/隐藏菜单栏、工具栏、滚动条，可用 Ctrl + F11 切换
@@ -370,7 +374,7 @@ endif
 
 "--find setting--
     set incsearch        " 输入字符串就显示匹配点
-    set hlsearch
+    set hlsearch      
 
 "--fold setting--
 "set foldenable                                        "启用折叠
@@ -441,7 +445,7 @@ endfunction
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+"inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 " Close popup by <Space>.
@@ -493,22 +497,22 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
     let g:ycm_use_ultisnips_completer = 1
 
 "let g:ycm_global_ycm_extra_conf = '$VIM\vimfiles\bundle\YouCompleteMe\python\.ycm_extra_conf.py'
-" 设置转到定义处的快捷键为ALT + G，这个功能非常赞
-nmap <M-g> :YcmCompleter GoToDefinitionElseDeclaration <C-R>=expand("<cword>")<CR><CR>
-" 补全功能在注释中同样有效
-let g:ycm_complete_in_comments=1
+" 设置转到定义处的快捷键为ALT + G，这个功能非常赞 
+nmap <M-g> :YcmCompleter GoToDefinitionElseDeclaration <C-R>=expand("<cword>")<CR><CR> 
+" 补全功能在注释中同样有效 
+let g:ycm_complete_in_comments=1  
 " 开启标签补全
 let g:ycm_collect_identifiers_from_tags_files = 1
-" 从第一个键入字符就开始罗列匹配项
+" 从第一个键入字符就开始罗列匹配项 
 let g:ycm_min_num_of_chars_for_completion=1
 "离开插入模式后自动关闭预览窗口
 "autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-" 禁止缓存匹配项，每次都重新生成匹配项
-let g:ycm_cache_omnifunc=0
-" 语法关键字补全
-let g:ycm_seed_identifiers_with_syntax=1
-" 修改对C函数的补全快捷键，默认是CTRL + space，修改为ALT + ;
-let g:ycm_key_invoke_completion = '<M-;>'
+" 禁止缓存匹配项，每次都重新生成匹配项  
+let g:ycm_cache_omnifunc=0  
+" 语法关键字补全              
+let g:ycm_seed_identifiers_with_syntax=1  
+" 修改对C函数的补全快捷键，默认是CTRL + space，修改为ALT + ;  
+let g:ycm_key_invoke_completion = '<M-;>'  
 "回车即选中当前项
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 
@@ -528,7 +532,7 @@ inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
     let g:syntastic_auto_loc_list = 1
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
-    let g:syntastic_python_python_exec = 'C:\Python34\python.exe'
+    let g:syntastic_python_python_exec = '/usr/bin/python3'
     " support html5
     "let g:syntastic_html_tidy_exec = 'tidy5'
 
@@ -543,7 +547,7 @@ inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 
 "***************
 "--matchit configure--
-    let b:match_words='\<begin\>:\<end\>'
+    let b:match_words='\<begin\>:\<end\>' 
     let b:match_ignorecase = 1
 
 "***************
@@ -586,7 +590,7 @@ inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
     vmap ob <Plug>(openbrowser-open)
     " Search word under cursor.
     nmap ob <Plug>(openbrowser-search)
-    " Search selected word.
+    " Search selected word. 
     vmap ob <Plug>(openbrowser-search)
     " If it looks like URI, Open URI under cursor.
     " Otherwise, Search word under cursor.
@@ -611,15 +615,15 @@ inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 "***************
 " -- indentLine configure--
 if g:isGUI
-     let g:indentLine_char = '┊'
-     let g:indentLine_color_gui = '#A4E57E'
+    let g:indentLine_char = "┊"
+    let g:indentLine_first_char = "┊"
 endif
 
 " 设置终端对齐线颜色，如果不喜欢可以将其注释掉采用默认颜色
 let g:indentLine_color_term = 239
 
 " 设置 GUI 对齐线颜色，如果不喜欢可以将其注释掉采用默认颜色
-
+" let g:indentLine_color_gui = '#A4E57E'
 
 "***************
 "--nerdtree configure--
@@ -627,7 +631,7 @@ let g:indentLine_color_term = 239
 nmap <F2> :NERDTreeToggle<CR>
 
 "***************
-" --nerdcommenter configure--
+" --nerdcommenter configure-->
 " -----------------------------------------------------------------------------
 " 我主要用于C/C++代码注释(其它的也行)
 " 以下为插件默认快捷键，其中的说明是以C/C++为例的，其它语言类似
@@ -641,29 +645,6 @@ let NERDSpaceDelims = 1                     "在左注释符之后，右注释�
 
 
 "***************
-" --vim-template configure--
-" -----------------------------------------------------------------------------
-"   let g:templates_plugin_loaded = 1 to skip loading of this plugin.
-"   let g:templates_no_autocmd = 1 to disable automatic insertion of template in new files.
-"    let g:templates_directory = '/path/to/directory' to specify a directory from where to search for additional global templates. See template search order below for more details. This can also be a list of paths.
-"    let g:templates_name_prefix = '.vimtemplate.' to change the name of the template files that are searched.
-"    let g:templates_global_name_prefix = 'template:' to change the prefix of the templates in the global template directory.
-"    let g:templates_debug = 1 to have vim-template output debug information
-"    let g:templates_fuzzy_start = 1 to be able to name templates with implicit fuzzy matching at the start of a template name. For example a template file named template:.c would match test.cpp.
-"    let g:templates_tr_in = [ '.', '_', '?' ] and let g:templates_tr_out = [ '\.', '.*', '\?' ] would allow you to change how template names are interpretted as regular expressions for matching file names. This might be helpful if hacking on a windows box where * is not allowed in file names. The above configuration, for example, treates underscores _ as the typical regex wildcard .*.
-"    let g:templates_no_builtin_templates = 1 to disable usage of the built-in templates. See template search order below for more details.
-"    let g:templates_user_variables = [[USERVAR, UserFunc]] to enable user-defined variable expanding. See User-defined variable expanding below for details.
-"    let g:templates_plugin_loaded = 1 to skip loading of this plugin.
-"    let g:templates_no_autocmd = 1 to disable automatic insertion of template in new files.
-"    let g:templates_directory = '/path/to/directory' to specify a directory from where to search for additional global templates. See template search order below for more details. This can also be a list of paths.
-"    let g:templates_name_prefix = '.vimtemplate.' to change the name of the template files that are searched.
-"    let g:templates_global_name_prefix = 'template:' to change the prefix of the templates in the global template directory.
-"    let g:templates_debug = 1 to have vim-template output debug information
-"    let g:templates_fuzzy_start = 1 to be able to name templates with implicit fuzzy matching at the start of a template name. For example a template file named template:.c would match test.cpp.
-"    let g:templates_tr_in = [ '.', '_', '?' ] and let g:templates_tr_out = [ '\.', '.*', '\?' ] would allow you to change how template names are interpretted as regular expressions for matching file names. This might be helpful if hacking on a windows box where * is not allowed in file names. The above configuration, for example, treates underscores _ as the typical regex wildcard .*.
-"    let g:templates_no_builtin_templates = 1 to disable usage of the built-in templates. See template search order below for more details.
-"    let g:templates_user_variables = [[USERVAR, UserFunc]] to enable user-defined variable expanding. See User-defined variable expanding below for details.
-
 
 "--------Plugin setting end------------
 
@@ -864,7 +845,7 @@ endfunc
     " imap <F9> <ESC>:cn<CR>
 
 "-- For ruby development setting --
-    " install rsense
+    " install rsense 
     "let g:rsenseHome = "/home/blueyi/opt/rsense-0.3"
     "If you want to start completion automatically, add the following code to .vimrc and restart Vim.
     "let g:rsenseUseOmniFunc = 1
@@ -876,24 +857,24 @@ endfunc
     "map <F8> :w !ruby -c % <CR>
     "imap <F8> <ESC>:w !ruby -c % <CR>
 
-    "autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+    "autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
     "autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
     "autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 "-- For python development setting --
 
-    " F9 run python
-    map <F9> :!python % <CR>
-    imap <F9> <ESC>:!python % <CR>
+    " F9 run python 
+    map <F9> :!python3 % <CR>
+    imap <F9> <ESC>:!python3 % <CR>
 
 "-- For CUDA development setting --
 
-    " F7 compile cu file
-    map <F7> :!nvcc % -o %<.exe <CR>
-    imap <F7> <ESC>!nvcc % -o %<.exe <CR>
-    " F8 run CUDA file
-    map <F8> :!%<.exe <CR>
-    imap <F8> <ESC>!%<.exe  <CR>
+    " F7 compile cu file 
+    map <F7> :!nvcc % -o %< <CR>
+    imap <F7> <ESC>!nvcc % -o %< <CR>
+    " F8 run CUDA file 
+    map <F8> :!./%< <CR>
+    imap <F8> <ESC>!./%<  <CR>
 
 "                          << 以下为常用工具配置 >>
 " =============================================================================

@@ -1,7 +1,0 @@
-[USTCmirror:13.2:UPDATE-OSS]
-name=USTCmirror:13.2:UPDATE-OSS
-enabled=0
-autorefresh=1
-baseurl=http://mirrors.ustc.edu.cn/opensuse/update/13.2
-type=rpm-md
-keeppackages=0

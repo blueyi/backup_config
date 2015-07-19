@@ -1,7 +1,0 @@
-[aliyun-mirror:13.2:UPDATE-NON-OSS]
-name=aliyun-mirror:13.2:UPDATE-NON-OSS
-enabled=1
-autorefresh=1
-baseurl=http://mirrors.aliyun.com/opensuse/update/13.2-non-oss
-type=rpm-md
-keeppackages=0

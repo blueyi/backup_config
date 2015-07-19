@@ -1,7 +1,0 @@
-[aliyun-mirror:13.2:NON-OSS]
-name=aliyun-mirror:13.2:NON-OSS
-enabled=1
-autorefresh=1
-baseurl=http://mirrors.aliyun.com/opensuse/distribution/13.2/repo/non-oss
-type=yast2
-keeppackages=0
