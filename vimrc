@@ -160,7 +160,7 @@ Plugin 'gmarik/Vundle.vim'
     Plugin 'Raimondi/delimitMate.git'
 
     " Syntax checking hacks for vim
-    Plugin 'scrooloose/syntastic'
+""    Plugin 'scrooloose/syntastic'
 
     " The ultimate snippet solution for Vim
     " Plugin 'SirVer/ultisnips'
@@ -210,7 +210,7 @@ Plugin 'gmarik/Vundle.vim'
     Plugin 'scrooloose/nerdtree'
 
     "Simple templates plugin for Vim
-    Plugin 'aperezdc/vim-template'
+    "Plugin 'aperezdc/vim-template'
 
 
 
@@ -889,8 +889,8 @@ endfunc
 "-- For CUDA development setting --
 
     " F7 compile cu file
-    map <F7> :!nvcc % -o %<.exe <CR>
-    imap <F7> <ESC>!nvcc % -o %<.exe <CR>
+    map <F7> :!nvcc --ptxas-options=-v % -o %<.exe <CR>
+    imap <F7> <ESC>!nvcc --ptxas-options=-v % -o %<.exe <CR>
     " F8 run CUDA file
     map <F8> :!%<.exe <CR>
     imap <F8> <ESC>!%<.exe  <CR>
