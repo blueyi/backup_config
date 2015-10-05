@@ -318,7 +318,7 @@ set number                                            "显示行号
 set laststatus=2                                      "启用状态栏信息
 set cmdheight=2                                       "设置命令行的高度为2，默认为1
 set cursorline                                        "突出显示当前行
-" set guifont=YaHei_Consolas_Hybrid:h10                 "设置字体:字号（字体名称空格用下划线代替）
+" set guifont=YaHei_Consolas_Hybrid:h8                 "设置字体:字号（字体名称空格用下划线代替）
 set guifont=DejaVu_Sans_Mono:h14
 set wrap                                            "设置不自动换行
 set shortmess=atI                                     "去掉欢迎界面
@@ -528,7 +528,7 @@ inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
     let g:syntastic_auto_loc_list = 1
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
-    let g:syntastic_python_python_exec = 'C:\Python34\python.exe'
+    let g:syntastic_python_python_exec = 'C:\Program Files\Python 3.5\python.exe'
     " support html5
     "let g:syntastic_html_tidy_exec = 'tidy5'
 
@@ -691,8 +691,8 @@ let s:Sou_Error = 0
 let s:windows_CFlags = 'gcc\ -fexec-charset=gbk\ -Wall\ -g\ -O0\ -c\ %\ -o\ %<.o'
 let s:linux_CFlags = 'gcc\ -Wall\ -g\ -O0\ -c\ %\ -o\ %<.o'
 
-let s:windows_CPPFlags = 'g++\ -fexec-charset=gbk\ -Wall\ -g\ -O0\ -c\ %\ -o\ %<.o'
-let s:linux_CPPFlags = 'g++\ -Wall\ -g\ -O0\ -c\ %\ -o\ %<.o'
+let s:windows_CPPFlags = 'g++\ -fexec-charset=gbk\ -Wall\ -std=gnu++11\ -g\ -O0\ -c\ %\ -o\ %<.o'
+let s:linux_CPPFlags = 'g++\ -Wall\ -std=gnu++11\ -g\ -O0\ -c\ %\ -o\ %<.o'
 
 func! Compile()
     exe ":ccl"
