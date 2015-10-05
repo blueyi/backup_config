@@ -160,7 +160,7 @@ Plugin 'gmarik/Vundle.vim'
     Plugin 'Raimondi/delimitMate.git'
 
     " Syntax checking hacks for vim
-""    Plugin 'scrooloose/syntastic'
+    Plugin 'scrooloose/syntastic'
 
     " The ultimate snippet solution for Vim
     " Plugin 'SirVer/ultisnips'
@@ -529,6 +529,11 @@ inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
     let g:syntastic_python_python_exec = 'C:\Program Files\Python 3.5\python.exe'
+    "默认使用g++
+    let g:syntastic_cpp_compiler_options = ' -std=c++11'
+    "如果使用clang++则需要以下
+    "let g:syntastic_cpp_compiler = 'clang++' 
+    "let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
     " support html5
     "let g:syntastic_html_tidy_exec = 'tidy5'
 
