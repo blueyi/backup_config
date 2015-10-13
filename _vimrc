@@ -160,7 +160,7 @@ Plugin 'gmarik/Vundle.vim'
     Plugin 'Raimondi/delimitMate.git'
 
     " Syntax checking hacks for vim
-    Plugin 'scrooloose/syntastic'
+    "Plugin 'scrooloose/syntastic'
 
     " The ultimate snippet solution for Vim
     " Plugin 'SirVer/ultisnips'
