@@ -210,7 +210,7 @@ Plugin 'gmarik/Vundle.vim'
     Plugin 'scrooloose/nerdtree'
 
     "Simple templates plugin for Vim
-    "Plugin 'aperezdc/vim-template'
+    Plugin 'aperezdc/vim-template'
 
 
 
@@ -310,7 +310,7 @@ imap <c-h> <Left>
 imap <c-l> <Right>
 
 " 启用每行超过80列的字符提示（字体变蓝并加下划线），不启用就注释掉
-au BufWinEnter * let w:m2=matchadd('Underlined', '\%>' . 80 . 'v.\+', -1)
+"au BufWinEnter * let w:m2=matchadd('Underlined', '\%>' . 80 . 'v.\+', -1)
 
 "  < 界面配置 >
 " -----------------------------------------------------------------------------
@@ -668,6 +668,12 @@ let NERDSpaceDelims = 1                     "在左注释符之后，右注释�
 "    let g:templates_tr_in = [ '.', '_', '?' ] and let g:templates_tr_out = [ '\.', '.*', '\?' ] would allow you to change how template names are interpretted as regular expressions for matching file names. This might be helpful if hacking on a windows box where * is not allowed in file names. The above configuration, for example, treates underscores _ as the typical regex wildcard .*.
 "    let g:templates_no_builtin_templates = 1 to disable usage of the built-in templates. See template search order below for more details.
 "    let g:templates_user_variables = [[USERVAR, UserFunc]] to enable user-defined variable expanding. See User-defined variable expanding below for details.
+
+"***************
+" --delimitMate configure--
+" -----------------------------------------------------------------------------
+let delimitMate_matchpairs = "(:),[:],{:},<:>"
+au FileType cpp,md let b:delimitMate_matchpairs = "(:),[:],{:}"
 
 
 "--------Plugin setting end------------
