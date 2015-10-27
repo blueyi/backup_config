@@ -1,0 +1,97 @@
+{
+"configs" : [
+  {
+"server" : "45.78.21.210",
+"server_port" : 443,
+"password" : "blueyiniu",
+"method" : "aes-256-cfb",
+"remarks" : "ss1-443"}
+,
+  {
+"server" : "45.78.7.200",
+"server_port" : 443,
+"password" : "blueyiniu",
+"method" : "aes-256-cfb",
+"remarks" : "SS2-443"}
+,
+  {
+"server" : "45.63.120.168",
+"server_port" : 443,
+"password" : "blueyiniu",
+"method" : "aes-256-cfb",
+"remarks" : "ss3-443"}
+,
+  {
+"server" : "128.199.80.126",
+"server_port" : 443,
+"password" : "blueyiniu",
+"method" : "aes-256-cfb",
+"remarks" : "ss4-443"}
+,
+  {
+"server" : "45.78.28.49",
+"server_port" : 10008,
+"password" : "blueyiniu",
+"method" : "aes-256-cfb",
+"remarks" : "Elion"}
+,
+  {
+"server" : "45.78.35.175",
+"server_port" : 10000,
+"password" : "getworld",
+"method" : "aes-256-cfb",
+"remarks" : ""}
+,
+  {
+"server" : "116.251.223.137",
+"server_port" : 10047,
+"password" : "blueyiniu",
+"method" : "aes-256-cfb",
+"remarks" : ""}
+,
+  {
+"server" : "45.78.21.210",
+"server_port" : 10131,
+"password" : "getworld.in",
+"method" : "aes-256-cfb",
+"remarks" : ""}
+,
+  {
+"server" : "159.203.253.154",
+"server_port" : 443,
+"password" : "trustme01",
+"method" : "aes-256-cfb",
+"remarks" : ""}
+,
+  {
+"server" : "45.78.29.21 ",
+"server_port" : 443,
+"password" : "mHLuRcu7Y3Ez",
+"method" : "aes-256-cfb",
+"remarks" : ""}
+,
+  {
+"server" : "116.251.223.137",
+"server_port" : 443,
+"password" : "blueyiniu",
+"method" : "aes-256-cfb",
+"remarks" : "新加坡"}
+,
+  {
+"server" : "45.78.29.21",
+"server_port" : 80,
+"password" : "getworld",
+"method" : "aes-256-cfb",
+"remarks" : ""}
+
+],
+"strategy" : null,
+"index" : 2,
+"global" : true,
+"enabled" : false,
+"shareOverLan" : false,
+"isDefault" : false,
+"localPort" : 1081,
+"pacUrl" : null,
+"useOnlinePac" : false,
+"availabilityStatistics" : true}
