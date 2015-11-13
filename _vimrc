@@ -672,7 +672,7 @@ let NERDSpaceDelims = 1                     "在左注释符之后，右注释�
 "***************
 " --delimitMate configure--
 " -----------------------------------------------------------------------------
-let delimitMate_matchpairs = "(:),[:],{:},<:>"
+let delimitMate_matchpairs = "(:),[:],{:}"
 au FileType cpp,md let b:delimitMate_matchpairs = "(:),[:],{:}"
 
 
