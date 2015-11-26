@@ -1,0 +1,30 @@
+"hg7226
+
+loadplugins '\.(js|penta)$'
+group user
+set cdpath=''
+set guioptions=bCrsTn
+
+" vim: set ft=pentadactyl:
+
+map -modes=n j -builtin 5j
+map -modes=n k -builtin 5k
+map -modes=n l -builtin <count><C-n>
+map -modes=n h -builtin <count><C-p>
+map -modes=n J -builtin <count><Down>
+map -modes=n K -builtin <count><Up>
+
+map -modes=n w -builtin <count>H
+map -modes=n e -builtin <count>L
+
+map -modes=n s -builtin <count>:stop<Return>
+
+map -modes=n vr -builtin <count>:restart<Return>
+map -modes=n vv -builtin <count>ZZ<Return>
+
+set hintkeys=asdfglkjh
+
+set nextpattern='\s*下页\s*','\s*下一页\s*','\bnext\b',^>$,'^(>>|»)$','^(>|»)','(>|»)$','\bmore,'
+set previouspattern='\s*上页\s*','\s*上一页\s*','\bprev|previous\b',^<$,'^(<<|«)$','^(<|«)','(<|«)$,
+
+set titlestring='Mozilla Firefox'
