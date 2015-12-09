@@ -1,9 +1,0 @@
-[$Version]
-update_info=okular.upd:sep_settings
-
-[General]
-DisplayDocumentNameOrPath=Path
-UseKTTSD=false
-
-[Main View]
-SplitterSizes=298,979

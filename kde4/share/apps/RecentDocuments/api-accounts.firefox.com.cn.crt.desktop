@@ -1,6 +1,0 @@
-[Desktop Entry]
-Icon=application-pkix-cert
-Name=api-accounts.firefox.com.cn.crt
-Type=Link
-URL[$e]=file://$HOME/goagent-3.2.3/local/certs/api-accounts.firefox.com.cn.crt
-X-KDE-LastOpenedWith=kleopatra
