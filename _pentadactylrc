@@ -3,7 +3,7 @@
 loadplugins '\.(js|penta)$'
 group user
 set cdpath=''
-set guioptions=bCrsN
+set guioptions=bBCrsN
 
 set hintkeys=asdfglkjhmnowe
 
