@@ -153,6 +153,9 @@ Plugin 'gmarik/Vundle.vim'
     " Plugin 'Valloric/YouCompleteMe.git'
     Plugin 'Shougo/neocomplete.vim.git'
 
+    "Speed up Vim by updating folds only when called-for.
+    Plugin 'Konfekt/FastFold.git'
+
     " lean & mean status/tabline for vim that's light as air
     Plugin 'bling/vim-airline.git'
 
@@ -160,7 +163,7 @@ Plugin 'gmarik/Vundle.vim'
     Plugin 'Raimondi/delimitMate.git'
 
     " Syntax checking hacks for vim
-    "Plugin 'scrooloose/syntastic'
+    Plugin 'scrooloose/syntastic'
 
     " The ultimate snippet solution for Vim
     " Plugin 'SirVer/ultisnips'
@@ -267,8 +270,8 @@ Plugin 'gmarik/Vundle.vim'
 
     filetype plugin on        "针对不同的文件类型加载对应的插件
     filetype plugin indent on               "启用缩进
-    "set ignorecase        " 搜索模式里忽略大小写
-    "set smartcase        " 如果搜索模式包含大写字符，不使用 'ignorecase' 选项。只有在输入搜索模式并且打开 'ignorecase' 选项时才会使用。
+    set ignorecase        " 搜索模式里忽略大小写
+    set smartcase        " 如果搜索模式包含大写字符，不使用 'ignorecase' 选项。只有在输入搜索模式并且打开 'ignorecase' 选项时才会使用。
     set autowrite        " 自动把内容写回文件: 如果文件被修改过，在每个 :next、:rewind、:last、:first、:previous、:stop、:suspend、:tag、:!、:make、CTRL-] 和 CTRL-^命令时进行；用 :buffer、CTRL-O、CTRL-I、'{A-Z0-9} 或 `{A-Z0-9} 命令转到别的文件时亦然。
     set autoindent        " 设置自动对齐(缩进)：即每行的缩进值与上一行相等；使用 noautoindent 取消设置
     "set smartindent        " 智能对齐方式
@@ -698,6 +701,7 @@ Plugin 'gmarik/Vundle.vim'
     let s:LastShellReturn_L = 0
     let s:ShowWarning = 1
     let s:Obj_Extension = '.o'
+    let s:Head_Extension = '.h'
     let s:Exe_Extension = '.exe'
     let s:Sou_Error = 0
 
@@ -716,8 +720,9 @@ Plugin 'gmarik/Vundle.vim'
         let v:statusmsg = ''
         if expand("%:e") == "c" || expand("%:e") == "cpp" || expand("%:e") == "cxx"
             let Obj = expand("%:p:r").s:Obj_Extension
+            let Head = expand("%:p:r").s:Head_Extension
             let Obj_Name = expand("%:p:t:r").s:Obj_Extension
-            if !filereadable(Obj) || (filereadable(Obj) && (getftime(Obj) < getftime(Sou)))
+            if !filereadable(Obj) || (filereadable(Obj) && (getftime(Obj) < getftime(Sou)) || (getftime(Obj) < getftime(Head)))
                 redraw!
                 if expand("%:e") == "c"
                     if g:iswindows
