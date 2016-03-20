@@ -737,7 +737,8 @@ Plugin 'gmarik/Vundle.vim'
             let Obj = expand("%:p:r").s:Obj_Extension
             let Head = expand("%:p:r").s:Head_Extension
             let Obj_Name = expand("%:p:t:r").s:Obj_Extension
-            if !filereadable(Obj) || (filereadable(Obj) && (getftime(Obj) < getftime(Sou)) || (getftime(Obj) < getftime(Head)))
+            "if !filereadable(Obj) || (filereadable(Obj) && (getftime(Obj) < getftime(Sou)) || (getftime(Obj) < getftime(Head)))
+            if !filereadable(Obj) || (filereadable(Obj))
                 redraw!
                 if expand("%:e") == "c"
                     if g:iswindows
