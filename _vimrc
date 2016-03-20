@@ -36,6 +36,8 @@ if (g:iswindows && g:isGUI)
  "   behave mswin
     set diffexpr=MyDiff()
 
+    set guifont=DejaVu_Sans_Mono:h14
+
     function MyDiff()
         let opt = '-a --binary '
         if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
@@ -84,11 +86,7 @@ if g:islinux
         " properly set to work with the Vim-related packages available in Debian.
         runtime! debian.vim
 
-        " Vim5 and later versions support syntax highlighting. Uncommenting the next
-        " line enables syntax highlighting by default.
-        if has("syntax")
-            syntax on
-        endif
+
 
         set mouse=a                    " 在任何模式下启用鼠标
         set t_Co=256                   " 在终端启用256色
@@ -148,6 +146,11 @@ Plugin 'gmarik/Vundle.vim'
 
 "********************************************
 "My Plugin
+
+
+    " Automated tag file generation and syntax highlighting of tags
+    Plugin 'xolox/vim-easytags.git'
+    Plugin 'xolox/vim-misc.git'
 
     " Auto complete
     " Plugin 'Valloric/YouCompleteMe.git'
@@ -270,6 +273,13 @@ Plugin 'gmarik/Vundle.vim'
 
     filetype plugin on        "针对不同的文件类型加载对应的插件
     filetype plugin indent on               "启用缩进
+
+    " Vim5 and later versions support syntax highlighting. Uncommenting the next
+    " line enables syntax highlighting by default.
+    if has("syntax")
+        syntax on
+    endif
+
     set ignorecase        " 搜索模式里忽略大小写
     set smartcase        " 如果搜索模式包含大写字符，不使用 'ignorecase' 选项。只有在输入搜索模式并且打开 'ignorecase' 选项时才会使用。
     set autowrite        " 自动把内容写回文件: 如果文件被修改过，在每个 :next、:rewind、:last、:first、:previous、:stop、:suspend、:tag、:!、:make、CTRL-] 和 CTRL-^命令时进行；用 :buffer、CTRL-O、CTRL-I、'{A-Z0-9} 或 `{A-Z0-9} 命令转到别的文件时亦然。
@@ -323,7 +333,6 @@ Plugin 'gmarik/Vundle.vim'
     set cmdheight=2                                       "设置命令行的高度为2，默认为1
     set cursorline                                        "突出显示当前行
     " set guifont=YaHei_Consolas_Hybrid:h8                 "设置字体:字号（字体名称空格用下划线代替）
-    set guifont=DejaVu_Sans_Mono:h14
     set wrap                                            "设置不自动换行
     set shortmess=atI                                     "去掉欢迎界面
     set gcr=a:block-blinkon0                              "禁止光标闪烁o
@@ -342,7 +351,8 @@ Plugin 'gmarik/Vundle.vim'
         colorscheme molokai
         " colorscheme solarized
     else
-        colorscheme Tomorrow-Night-Eighties               "终端配色方案
+        " colorscheme Tomorrow-Night-Eighties               "终端配色方案
+        colorscheme molokai
     endif
 
     " 显示/隐藏菜单栏、工具栏、滚动条，可用 Ctrl + F11 切换
@@ -572,6 +582,7 @@ Plugin 'gmarik/Vundle.vim'
     "***************
     "--tagbar configure--
     nmap <F3> :TagbarToggle<CR>
+    let g:tagbar_autofocus = 1
 
     "***************
     "--vim-markdown configure--
@@ -679,6 +690,10 @@ Plugin 'gmarik/Vundle.vim'
     " -----------------------------------------------------------------------------
     let delimitMate_matchpairs = "(:),[:],{:}"
     au FileType cpp,md let b:delimitMate_matchpairs = "(:),[:],{:}"
+
+
+    " --easytags configure--
+    let g:easytags_file = './tags'
 
 
     "--------Plugin setting end------------
@@ -925,40 +940,40 @@ Plugin 'gmarik/Vundle.vim'
     "                          << 以下为常用工具配置 >>
     " =============================================================================
 
-    " -----------------------------------------------------------------------------
-    "  < cscope 工具配置 >
-    " -----------------------------------------------------------------------------
-    " 用Cscope自己的话说 - "你可以把它当做是超过频的ctags"
-    if has("cscope")
-        "设定可以使用 quickfix 窗口来查看 cscope 结果
-        set cscopequickfix=s-,c-,d-,i-,t-,e-
-        "使支持用 Ctrl+]  和 Ctrl+t 快捷键在代码间跳转
-        set cscopetag
-        "如果你想反向搜索顺序设置为1
-        set csto=0
-        "在当前目录中添加任何数据库
-        if filereadable("cscope.out")
-            cs add cscope.out
-            "否则添加数据库环境中所指出的
-        elseif $CSCOPE_DB != ""
-            cs add $CSCOPE_DB
-        endif
-        set cscopeverbose
-        "快捷键设置
-        nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-        nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-        nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-        nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-    endif
+    "    " -----------------------------------------------------------------------------
+    "    "  < cscope 工具配置 >
+    "    " -----------------------------------------------------------------------------
+    "    " 用Cscope自己的话说 - "你可以把它当做是超过频的ctags"
+    "    if has("cscope")
+    "        "设定可以使用 quickfix 窗口来查看 cscope 结果
+    "        set cscopequickfix=s-,c-,d-,i-,t-,e-
+    "        "使支持用 Ctrl+]  和 Ctrl+t 快捷键在代码间跳转
+    "        set cscopetag
+    "        "如果你想反向搜索顺序设置为1
+    "        set csto=0
+    "        "在当前目录中添加任何数据库
+    "        if filereadable("cscope.out")
+    "            cs add cscope.out
+    "            "否则添加数据库环境中所指出的
+    "        elseif $CSCOPE_DB != ""
+    "            cs add $CSCOPE_DB
+    "        endif
+    "        set cscopeverbose
+    "        "快捷键设置
+    "        nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+    "        nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+    "        nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+    "        nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+    "        nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+    "        nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+    "        nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    "        nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+    "    endif
 
     "  < ctags 工具配置 >
     " -----------------------------------------------------------------------------
     " 对浏览代码非常的方便,可以在函数,变量之间跳转等
-    set tags+=tags;                            "向上级目录递归查找tags文件（好像只有在Windows下才有用）
+    set tags=./tags,tags;$HOME
     "set tags+=./addtags/qt5_h
     "set tags+=./addtags/cpp_stl
     "set tags+=./addtags/qt5_cpp
