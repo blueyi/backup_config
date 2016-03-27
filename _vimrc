@@ -109,7 +109,7 @@ endif
 " -----------------------------------------------------------------------------
 " 用于更方便的管理vim插件，具体用法参考 :h vundle 帮助
 " 安装方法为在终端输入如下命令
-" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " 如果想在 windows 安装就必需先安装 "git for window"，可查阅网上资料
 
 set nocompatible                                      "禁用 Vi 兼容模式
@@ -125,7 +125,7 @@ else
 endif
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
