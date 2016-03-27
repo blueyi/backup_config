@@ -36,7 +36,7 @@ if (g:iswindows && g:isGUI)
  "   behave mswin
     set diffexpr=MyDiff()
 
-    set guifont=DejaVu_Sans_Mono:h14
+    set guifont=DejaVu_Sans_Mono:h12
 
     function MyDiff()
         let opt = '-a --binary '
@@ -205,7 +205,7 @@ Plugin 'gmarik/Vundle.vim'
     Plugin 'tpope/vim-sleuth'
 
     "Open URI with your favorite browser from your most favorite editor
-    Plugin 'tyru/open-browser.vim'
+    "Plugin 'tyru/open-browser.vim'
 
     "Alternate Files quickly (.c --> .h etc)
     Plugin 'blueyi/a.vim'
@@ -598,23 +598,23 @@ Plugin 'gmarik/Vundle.vim'
     let g:gundo_right = 1
 
     "***************
-    "--open-browser configure--
-    nmap gx <Plug>(openbrowser-smart-search)
-    vmap gx <Plug>(openbrowser-smart-search)
-    " Open URI under cursor.
-    nmap ob <Plug>(openbrowser-open)
-    " Open selected URI.
-    vmap ob <Plug>(openbrowser-open)
-    " Search word under cursor.
-    nmap ob <Plug>(openbrowser-search)
-    " Search selected word.
-    vmap ob <Plug>(openbrowser-search)
-    " If it looks like URI, Open URI under cursor.
-    " Otherwise, Search word under cursor.
-    nmap ob <Plug>(openbrowser-smart-search)
-    " If it looks like URI, Open selected URI.
-    " Otherwise, Search selected word.
-    vmap ob <Plug>(openbrowser-smart-search)
+"    "--open-browser configure--
+"    nmap gx <Plug>(openbrowser-smart-search)
+"    vmap gx <Plug>(openbrowser-smart-search)
+"    " Open URI under cursor.
+"    nmap ob <Plug>(openbrowser-open)
+"    " Open selected URI.
+"    vmap ob <Plug>(openbrowser-open)
+"    " Search word under cursor.
+"    nmap ob <Plug>(openbrowser-search)
+"    " Search selected word.
+"    vmap ob <Plug>(openbrowser-search)
+"    " If it looks like URI, Open URI under cursor.
+"    " Otherwise, Search word under cursor.
+"    nmap ob <Plug>(openbrowser-smart-search)
+"    " If it looks like URI, Open selected URI.
+"    " Otherwise, Search selected word.
+"    vmap ob <Plug>(openbrowser-smart-search)
     " In command-line
     " :OpenBrowser http://google.com/
     " :OpenBrowserSearch ggrks
